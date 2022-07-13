@@ -41,7 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Concrete\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ComplexTypes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BackendDemo.Core\BackendDemo.Core.csproj">
+      <Project>{C00870F3-EFDC-48CE-9753-3A0FE0801525}</Project>
+      <Name>BackendDemo.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
