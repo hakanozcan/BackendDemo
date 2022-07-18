@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BackendDemo.Core.DataAccess;
+using BackendDemo.Northwind.Entities.ComplexTypes;
 using BackendDemo.Northwind.Entities.Concrete;
 
 namespace BackendDemo.Northwind.DataAccess.Abstract
 {
     public interface IProductDal:IEntityRepository<Product>
     {
-
+        List<ProductDetail> GetProductDetails();
     }
 }
