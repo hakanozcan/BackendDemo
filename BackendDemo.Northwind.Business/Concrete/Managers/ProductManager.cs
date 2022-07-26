@@ -8,6 +8,7 @@ using BackendDemo.Northwind.Business.Abstract;
 using BackendDemo.Northwind.Business.ValidationRules.FluentValidation;
 using BackendDemo.Northwind.DataAccess.Abstract;
 using BackendDemo.Northwind.Entities.Concrete;
+using BackendDemo.Core.Aspects.Postsharp;
 
 namespace BackendDemo.Northwind.Business.Concrete.Managers
 {
@@ -29,14 +30,14 @@ namespace BackendDemo.Northwind.Business.Concrete.Managers
         {
             return _productDal.Get(p => p.ProductId == id);
         }
-        [FluentValidate(typeof(ProductValidator))]
+        [FluentValidationAspect(typeof(ProductValidator))]
         public Product Add(Product product)
         {
             
             return _productDal.Add(product);
         }
 
-        [FluentValidate(typeof(ProductValidator))]
+        [FluentValidationAspect(typeof(ProductValidator))]
         public Product Update(Product product)
         {
             
