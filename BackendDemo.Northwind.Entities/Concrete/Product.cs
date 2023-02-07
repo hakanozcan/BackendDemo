@@ -14,6 +14,5 @@ namespace BackendDemo.Northwind.Entities.Concrete
         public virtual int CategoryId { get; set; }
         public virtual string QuantityPerUnit { get; set; }
         public virtual decimal UnitPrice { get; set; }
-
     }
 }

@@ -24,7 +24,7 @@ namespace BackendDemo.Northwind.DataAccess.Concrete.NHibernate
             {
                 var result = from p in session.Query<Product>()
                     join c in session.Query<Category>() on p.CategoryId equals c.CategoryId
-                    select new ProductDetail()
+                    select new ProductDetail
                     {
                         ProductId = p.ProductId,
                         CategoryName = c.CategoryName,

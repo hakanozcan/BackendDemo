@@ -9,13 +9,13 @@ using BackendDemo.Core.Entities;
 
 namespace BackendDemo.Core.DataAccess.EntityFramework
 {
-    public class EfEntityRepositoryBase<TEntity,TContext>:IEntityRepository<TEntity> 
-        where TEntity:class,IEntity,new()
-        where TContext:DbContext,new()
+    public class EfEntityRepositoryBase<TEntity,TContext>: IEntityRepository<TEntity>
+    where TEntity:class, IEntity,new()
+    where TContext:DbContext,new()
     {
         public List<TEntity> GetList(Expression<Func<TEntity, bool>> filter = null)
         {
-            using (var context=new TContext())
+            using (var context= new TContext())
             {
                 return filter == null
                     ? context.Set<TEntity>().ToList()
@@ -25,7 +25,7 @@ namespace BackendDemo.Core.DataAccess.EntityFramework
 
         public TEntity Get(Expression<Func<TEntity, bool>> filter)
         {
-            using (var context=new TContext())
+            using (var context = new TContext())
             {
                 return context.Set<TEntity>().SingleOrDefault(filter);
             }
@@ -50,7 +50,6 @@ namespace BackendDemo.Core.DataAccess.EntityFramework
                 updatedEntity.State = EntityState.Modified;
                 context.SaveChanges();
                 return entity;
-
             }
         }
 
@@ -64,4 +63,5 @@ namespace BackendDemo.Core.DataAccess.EntityFramework
             }
         }
     }
+
 }

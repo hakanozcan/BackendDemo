@@ -10,6 +10,5 @@ namespace BackendDemo.Northwind.DataAccess.Abstract
 {
     public interface ICategoryDal:IEntityRepository<Category>
     {
-
     }
 }

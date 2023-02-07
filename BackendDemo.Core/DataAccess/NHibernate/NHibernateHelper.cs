@@ -7,13 +7,14 @@ using NHibernate;
 
 namespace BackendDemo.Core.DataAccess.NHibernate
 {
-    public abstract class NHibernateHelper:IDisposable
+    public abstract class NHibernateHelper : IDisposable
     {
         private static ISessionFactory _sessionFactory;
 
-        public virtual ISessionFactory SessionFactory => _sessionFactory ?? (_sessionFactory = InitializeFactory());
-
-
+        public virtual ISessionFactory SessionFactory
+        {
+            get { return _sessionFactory ?? (_sessionFactory = InitializeFactory()); }
+        }
 
         protected abstract ISessionFactory InitializeFactory();
 
@@ -21,7 +22,7 @@ namespace BackendDemo.Core.DataAccess.NHibernate
         {
             return SessionFactory.OpenSession();
         }
-
+        
         public void Dispose()
         {
             GC.SuppressFinalize(this);

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5D7C2CEC-76B4-4F08-A58F-774981E0C675}</ProjectGuid>
+    <ProjectGuid>{A8147EA9-70D1-4F0A-8B8B-D361F91DD5AF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BackendDemo.Northwind.Entities</RootNamespace>
@@ -49,9 +49,12 @@
   <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\BackendDemo.Core\BackendDemo.Core.csproj">
-      <Project>{C00870F3-EFDC-48CE-9753-3A0FE0801525}</Project>
+      <Project>{06D916BE-01A4-4843-B11D-745833ACF265}</Project>
       <Name>BackendDemo.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

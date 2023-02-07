@@ -21,9 +21,6 @@ namespace BackendDemo.Northwind.DataAccess.Concrete.EntityFramework.Mappings
             Property(x => x.QuantityPerUnit).HasColumnName("QuantityPerUnit");
             Property(x => x.UnitPrice).HasColumnName("UnitPrice");
 
-
         }
-
-
     }
 }

@@ -13,7 +13,6 @@ namespace BackendDemo.Northwind.DataAccess.Concrete.NHibernate
     {
         public NhCategoryDal(NHibernateHelper nHibernateHelper) : base(nHibernateHelper)
         {
-
         }
     }
 }

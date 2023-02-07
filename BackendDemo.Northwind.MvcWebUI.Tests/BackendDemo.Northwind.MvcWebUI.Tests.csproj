@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FF4B61FF-B6ED-46BB-AB96-AC7B5FA6F5FE}</ProjectGuid>
+    <ProjectGuid>{0AA20F87-64F6-48B3-88CE-BC49C86D442D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BackendDemo.Northwind.MvcWebUI.Tests</RootNamespace>
@@ -64,7 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BackendDemo.Northwind.MvcWebUI\BackendDemo.Northwind.MvcWebUI.csproj">
-      <Project>{317457A9-4FB8-4393-878F-6C5AD444C49A}</Project>
+      <Project>{E56F9AF3-0A9D-424A-8B96-1893A156B24A}</Project>
       <Name>BackendDemo.Northwind.MvcWebUI</Name>
     </ProjectReference>
   </ItemGroup>

@@ -10,7 +10,7 @@ namespace BackendDemo.Northwind.Business.ValidationRules.FluentValidation
 {
     public class ProductValidator:AbstractValidator<Product>
     {
-        public ProductValidator()
+        public ProductValidator ()
         {
             RuleFor(p => p.CategoryId).NotEmpty();
             RuleFor(p => p.ProductName).NotEmpty();
@@ -19,9 +19,8 @@ namespace BackendDemo.Northwind.Business.ValidationRules.FluentValidation
             RuleFor(p => p.ProductName).Length(2, 20);
             RuleFor(p => p.UnitPrice).GreaterThan(20).When(p => p.CategoryId == 1);
             
-
         }
 
-    
+        
     }
 }

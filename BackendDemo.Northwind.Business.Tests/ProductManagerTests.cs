@@ -19,7 +19,5 @@ namespace BackendDemo.Northwind.Business.Tests
             ProductManager productManager = new ProductManager(mock.Object);
             productManager.Add(new Product());
         }
-
-        
     }
 }

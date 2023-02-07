@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("BackendDemo.Northwind.MvcWebUI.Tests")]
-[assembly: AssemblyCopyright("Copyright ©  2022")]
+[assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("ff4b61ff-b6ed-46bb-ab96-ac7b5fa6f5fe")]
+[assembly: Guid("0aa20f87-64f6-48b3-88ce-bc49c86d442d")]
 
 // Version information for an assembly consists of the following four values:
 //

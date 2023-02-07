@@ -11,13 +11,12 @@ namespace BackendDemo.Core.CrossCuttingConcerns.Validation.FluentValidation
     {
         public static void FluentValidate(IValidator validator, object entity)
         {
-            var result = validator.Validate((IValidationContext)entity);
-            if (result.Errors.Count>0)
+            var context = new ValidationContext<object>(entity);
+            var result = validator.Validate(context);
+            if (result.Errors.Count > 0)
             {
                 throw new ValidationException(result.Errors);
             }
         }
-      
-    
     }
 }

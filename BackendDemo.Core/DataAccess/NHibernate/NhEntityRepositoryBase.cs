@@ -5,12 +5,12 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using BackendDemo.Core.Entities;
-
+using NHibernate.Linq;
 
 namespace BackendDemo.Core.DataAccess.NHibernate
 {
     public class NhEntityRepositoryBase<TEntity>:IEntityRepository<TEntity>
-    where TEntity:class,IEntity,new()
+    where TEntity:class, IEntity,new()
     {
         private NHibernateHelper _nHibernateHelper;
 

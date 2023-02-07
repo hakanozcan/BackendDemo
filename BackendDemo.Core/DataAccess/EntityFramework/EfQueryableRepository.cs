@@ -8,8 +8,7 @@ using BackendDemo.Core.Entities;
 
 namespace BackendDemo.Core.DataAccess.EntityFramework
 {
-    public class EfQueryableRepository<T>:IQueryableRepository<T> where T:class,IEntity,new()
-
+    public class EfQueryableRepository<T> : IQueryableRepository<T> where T : class, IEntity,new()
     {
         private DbContext _context;
         private IDbSet<T> _entities;
