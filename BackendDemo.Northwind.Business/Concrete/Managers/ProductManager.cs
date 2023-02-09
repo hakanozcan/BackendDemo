@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BackendDemo.Core.Aspects.CacheAspects;
 using BackendDemo.Core.CrossCuttingConcerns.Validation.FluentValidation;
 using BackendDemo.Northwind.Business.Abstract;
 using BackendDemo.Northwind.Business.ValidationRules.FluentValidation;
@@ -11,6 +12,7 @@ using BackendDemo.Northwind.Entities.Concrete;
 using BackendDemo.Core.Aspects.Postsharp;
 using BackendDemo.Core.Aspects.Postsharp.TransactionAspects;
 using BackendDemo.Core.Aspects.Postsharp.ValidationAspects;
+using BackendDemo.Core.CrossCuttingConcerns.Caching.Microsoft;
 
 namespace BackendDemo.Northwind.Business.Concrete.Managers
 {
@@ -22,7 +24,7 @@ namespace BackendDemo.Northwind.Business.Concrete.Managers
         {
             _productDal = productDal;
         }
-
+        [CacheAspect(typeof(MemoryCacheManager),120)]
         public List<Product> GetAll()
         {
             return _productDal.GetList();
@@ -34,6 +36,7 @@ namespace BackendDemo.Northwind.Business.Concrete.Managers
         }
 
         [FluentValidationAspect(typeof(ProductValidator))]
+        [CacheRemoveAspect(typeof(MemoryCacheManager))]
         public Product Add(Product product)
         {
            
