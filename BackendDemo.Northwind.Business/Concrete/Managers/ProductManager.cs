@@ -10,9 +10,11 @@ using BackendDemo.Northwind.Business.ValidationRules.FluentValidation;
 using BackendDemo.Northwind.DataAccess.Abstract;
 using BackendDemo.Northwind.Entities.Concrete;
 using BackendDemo.Core.Aspects.Postsharp;
+using BackendDemo.Core.Aspects.Postsharp.LogAspects;
 using BackendDemo.Core.Aspects.Postsharp.TransactionAspects;
 using BackendDemo.Core.Aspects.Postsharp.ValidationAspects;
 using BackendDemo.Core.CrossCuttingConcerns.Caching.Microsoft;
+using BackendDemo.Core.CrossCuttingConcerns.Logging.Log4Net.Loggers;
 
 namespace BackendDemo.Northwind.Business.Concrete.Managers
 {
@@ -25,6 +27,7 @@ namespace BackendDemo.Northwind.Business.Concrete.Managers
             _productDal = productDal;
         }
         [CacheAspect(typeof(MemoryCacheManager),120)]
+        [LogAspect(typeof(DatabaseLogger))]
         public List<Product> GetAll()
         {
             return _productDal.GetList();
